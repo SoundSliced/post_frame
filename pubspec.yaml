@@ -1,8 +1,8 @@
 name: post_frame
-description: A Flutter package for post_frame functionality
+description: A Flutter package that provides utilities for executing actions after the current frame has been rendered, with support for waiting on scroll controllers and layout metrics.
 issue_tracker: https://github.com/SoundSliced/post_frame/issues
 repository: https://github.com/SoundSliced/post_frame
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/SoundSliced/post_frame
 
 environment:
@@ -16,6 +16,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^6.0.0
 
 flutter:
