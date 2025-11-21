@@ -39,7 +39,24 @@ class _ExamplePageState extends State<ExamplePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('PostFrame Example')),
-      body: Center(child: Text(_message)),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(_message),
+            ElevatedButton(
+              onPressed: () {
+                PostFrame.postFrame(() {
+                  setState(() {
+                    _message = 'Button pressed after frame!';
+                  });
+                });
+              },
+              child: const Text('Press Me'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

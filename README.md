@@ -1,7 +1,6 @@
-
 # post_frame
 
-`post_frame` is a Flutter package that provides a utility to execute actions after the first frame is rendered, making it easy to schedule work that depends on layout or widget tree completion.
+`post_frame` is a Flutter package that provides utilities to execute actions after the first frame is rendered, making it easy to schedule work that depends on layout or widget tree completion. It also supports waiting for `ScrollController` metrics and end-of-frame passes for precise timing.
 
 ## Installation
 
@@ -74,7 +73,24 @@ class _ExamplePageState extends State<ExamplePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('PostFrame Example')),
-      body: Center(child: Text(_message)),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(_message),
+            ElevatedButton(
+              onPressed: () {
+                PostFrame.postFrame(() {
+                  setState(() {
+                    _message = 'Button pressed after frame!';
+                  });
+                });
+              },
+              child: const Text('Press Me'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -85,10 +101,6 @@ See the [`example/`](example/main.dart) directory for a runnable example.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Repository
-
-https://github.com/SoundSliced/post_post_frame
 
 ## Repository
 

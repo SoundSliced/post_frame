@@ -14,4 +14,25 @@ void main() {
     await tester.pump();
     expect(message, 'after');
   }, timeout: const Timeout(Duration(seconds: 10)));
+
+  testWidgets('PostFrame.postFrame waits for ScrollController metrics',
+      (tester) async {
+    final scrollController = ScrollController();
+    String message = 'before';
+
+    await tester.pumpWidget(MaterialApp(
+      home: ListView.builder(
+        controller: scrollController,
+        itemCount: 100,
+        itemBuilder: (context, index) => Text('Item $index'),
+      ),
+    ));
+
+    PostFrame.postFrame(() {
+      message = 'after';
+    }, scrollControllers: [scrollController]);
+
+    await tester.pump();
+    expect(message, 'after');
+  });
 }

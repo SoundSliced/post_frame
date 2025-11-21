@@ -1,7 +1,8 @@
 ## 1.0.1
 
-* Version 1.0.1
-
+* Enhanced example folder with dynamic button interaction.
+* Added a new test to verify `PostFrame.postFrame` waits for `ScrollController` metrics.
+* Updated dependencies in `pubspec.yaml`.
 
 ## 1.0.0
 
