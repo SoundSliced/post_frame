@@ -32,7 +32,10 @@ void main() {
       message = 'after';
     }, scrollControllers: [scrollController]);
 
-    await tester.pump();
+    // Simulate scrolling to ensure metrics are updated
+    scrollController.jumpTo(50);
+    await tester.pumpAndSettle();
+
     expect(message, 'after');
   });
 }
