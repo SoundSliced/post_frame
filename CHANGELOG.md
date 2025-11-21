@@ -1,3 +1,8 @@
+## 1.0.2
+
+* updated `README.md` file.
+
+
 ## 1.0.1
 
 * Enhanced example folder with dynamic button interaction.

@@ -8,8 +8,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  post_frame:
-    path: ../my_extensions/post_frame
+  post_frame:^1.0.2
 ```
 
 ## Features
