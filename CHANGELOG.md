@@ -1,3 +1,7 @@
+## 1.0.3
+
+* Version 1.0.3
+
 ## 1.0.2
 
 * updated `README.md` file.
