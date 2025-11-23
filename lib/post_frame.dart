@@ -4,3 +4,4 @@
 library;
 
 export 'src/post_frame.dart';
+export 'src/post_frame_extensions.dart';
