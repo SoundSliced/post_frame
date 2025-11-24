@@ -112,7 +112,9 @@ class _ExamplePageState extends State<ExamplePage> {
 }
 ```
 
-See the [`example/`](example/main.dart) directory for a runnable example.
+See `example/lib/main.dart` for the minimal quick start.
+
+For comprehensive demonstrations (builders, repeat, queueRun, onLayout, predicates, debouncing, error handling, diagnostics) open `example/lib/advanced_examples.dart` and use `PostFrameExampleApp` as your app root.
 
 ### Advanced Usage
 
@@ -140,7 +142,7 @@ void initState() {
 }
 ```
 
-The advanced auto-scroll merged example lives in `example/main.dart` and demonstrates:
+The advanced auto-scroll merged example lives in `example/lib/advanced_examples.dart` and demonstrates:
 1. Waiting on multiple scroll controllers.
 2. Tuned `maxWaitFrames` and `endOfFramePasses`.
 3. Auto-scrolling after metrics stabilization.
