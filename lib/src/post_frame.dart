@@ -544,9 +544,9 @@ class PostFrame {
         // microtask flush then next frame
         await Future.delayed(Duration.zero);
       }
-      final context = key.currentContext;
-      if (context == null) continue; // Not mounted yet.
-      final renderObject = context.findRenderObject();
+      // Fetch and use the RenderObject directly without storing a BuildContext
+      // variable (avoids use_build_context_synchronously lint false-positive).
+      final renderObject = key.currentContext?.findRenderObject();
       if (renderObject is! RenderBox) continue;
       final size = renderObject.hasSize ? renderObject.size : null;
       if (size == null || size == Size.zero) {
