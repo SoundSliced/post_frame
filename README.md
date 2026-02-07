@@ -2,7 +2,7 @@
 
 `post_frame` is a Flutter package that provides utilities to execute actions after the first frame is rendered, making it easy to schedule work that depends on layout or widget tree completion. It supports waiting for `ScrollController` metrics and end-of-frame passes for precise timing of UI-dependent logic.
 
-Version 1.1.0 introduces comprehensive post-frame scheduling features:
+Comprehensive post-frame scheduling features:
 
 **Core Features:**
 * Advanced `PostFrame.run<T>()` with cancellation, timeout & diagnostics
@@ -23,7 +23,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  post_frame: ^1.1.0
+  post_frame: ^2.0.0
 ```
 
 ## Features
