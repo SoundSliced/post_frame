@@ -1,3 +1,7 @@
+
+## 2.0.2
+- `s_packages` package dependency upgraded
+
 ## 2.0.1
 - `s_packages` package dependency upgraded
 
