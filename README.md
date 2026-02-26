@@ -23,7 +23,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  post_frame: ^2.0.2
+  post_frame: ^3.0.0
 ```
 
 ## Features
